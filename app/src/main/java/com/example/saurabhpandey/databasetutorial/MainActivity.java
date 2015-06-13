@@ -57,9 +57,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void save(View view) {
         File file = null;
-        String userNameText =  username.getText().toString();
+        String userNameText = username.getText().toString();
         String passwordText = password.getText().toString();
-userNameText = userNameText + "  ";
+        userNameText = userNameText + "  ";
         FileOutputStream fileOutputStream = null;
         try {
             file = getFilesDir();
@@ -71,8 +71,7 @@ userNameText = userNameText + "  ";
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
-        }
-        finally {
+        } finally {
             try {
                 fileOutputStream.close();
             } catch (IOException e) {
@@ -80,7 +79,7 @@ userNameText = userNameText + "  ";
             }
 
         }
-        Toast.makeText(this, "Storing Data to "+file+ "/SaurabhDatabase.txt", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Storing Data to " + file + "/SaurabhDatabase.txt", Toast.LENGTH_LONG).show();
 
 
     }

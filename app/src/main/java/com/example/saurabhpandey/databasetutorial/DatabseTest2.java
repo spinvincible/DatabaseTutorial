@@ -3,6 +3,7 @@ package com.example.saurabhpandey.databasetutorial;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -14,7 +15,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 
-public class DatabseTest2 extends ActionBarActivity {
+public class DatabseTest2 extends AppCompatActivity {
     EditText usernamePrint, passwordPrint;
 
     @Override
@@ -58,7 +59,7 @@ public class DatabseTest2 extends ActionBarActivity {
 
     public void showData(View view) {
 
-FileInputStream fileInputStream = null;
+        FileInputStream fileInputStream = null;
         try {
             fileInputStream = openFileInput("SaurabhDatabase.txt");
             StringBuffer stringBuffer = new StringBuffer();
@@ -76,8 +77,7 @@ FileInputStream fileInputStream = null;
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
-        }
-        finally {
+        } finally {
             try {
                 fileInputStream.close();
             } catch (IOException e) {
